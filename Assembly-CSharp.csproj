@@ -45,11 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\BirdMove.cs" />
-     <Compile Include="Assets\BoxManager.cs" />
-     <Compile Include="Assets\FollowCamera.cs" />
-     <Compile Include="Assets\Grounded.cs" />
-     <Compile Include="Assets\PlayerBirdController.cs" />
+     <Compile Include="Assets\Scripts\BirdMove.cs" />
+     <Compile Include="Assets\Scripts\BoxManager.cs" />
+     <Compile Include="Assets\Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\Grounded.cs" />
+     <Compile Include="Assets\Scripts\NoticeMe.cs" />
+     <Compile Include="Assets\Scripts\PlayerBirdController.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />

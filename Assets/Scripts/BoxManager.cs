@@ -32,13 +32,13 @@ public class BoxManager : MonoBehaviour {
 	public void tryHide(bool doHide){
 		//increment counter
 		if (doHide) {
-			hideCounter = hideCounter + Time.deltaTime;
-			if (hideCounter > DeployTime) {
+			hideCounter = hideCounter + Time.deltaTime/DeployTime;
+			if (hideCounter > 1f) {
 				Hide ();
 			}
 		} else {
-			hideCounter = hideCounter - Time.deltaTime;
-			if (hideCounter < 0) {
+			hideCounter = hideCounter - Time.deltaTime/DeployTime	;
+			if (hideCounter < 0f) {
 				Unhide ();
 			}
 		}
@@ -51,7 +51,7 @@ public class BoxManager : MonoBehaviour {
 			Box = (GameObject) Instantiate(Boxes[BoxIndex],BoxTarget.transform.position,BoxTarget.transform.rotation);
 			hidden = true;
 		}
-		hideCounter = DeployTime;//max out counter
+		hideCounter = 1;//max out counter
 	}
 
 	void Unhide(){
