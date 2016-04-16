@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\PlayerBirdController.cs">
+    <Files>
+      <File FileName="Assets\Standard Assets\Characters\ThirdPersonCharacter\Scripts\AICharacterControl.cs" Line="32" Column="104" />
+      <File FileName="Assets\BirdMove.cs" Line="24" Column="18" />
+      <File FileName="Assets\PlayerBirdController.cs" Line="23" Column="24" />
+      <File FileName="Assets\FollowCamera.cs" Line="18" Column="1" />
+      <File FileName="Assets\BoxManager.cs" Line="52" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
