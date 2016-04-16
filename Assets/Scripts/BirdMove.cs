@@ -38,6 +38,11 @@ public class BirdMove : MonoBehaviour {
 	}
 
 	void FixedUpdate(){
+		//take a raycast from my feet to check the ground angle
+		RaycastHit h;
+		Physics.Raycast (transform.position, Vector3.down, out h, 1.0f);
+		print (h.normal);
+
 		rb.velocity = new Vector3(movement.x * MoveSpeed,rb.velocity.y,movement.z*MoveSpeed);
 	}
 

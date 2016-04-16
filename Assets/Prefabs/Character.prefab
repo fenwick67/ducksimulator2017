@@ -119,6 +119,7 @@ GameObject:
   - 136: {fileID: 13676364}
   - 114: {fileID: 11421584}
   - 114: {fileID: 11443084}
+  - 114: {fileID: 11409342}
   m_Layer: 0
   m_Name: duck-rigged-2anims
   m_TagString: Untagged
@@ -651,6 +652,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11409342
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbe7278387639f4b8e142ca2045b3fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoxMan: {fileID: 11425986}
 --- !u!114 &11421584
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -23,7 +23,12 @@ public class PlayerBirdController : MonoBehaviour {
 			if (boxMan.hidden) {
 				bm.Move (Vector3.zero);
 			} else {
-				bm.Move (new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical")));
+				
+				if (Input.GetButton ("Walk")) {
+					bm.Move (new Vector3 (Input.GetAxis ("Horizontal")*.5f, 0f, Input.GetAxis ("Vertical")*.5f));
+				} else {
+					bm.Move (new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical")));
+				}
 			}
 
 		}
