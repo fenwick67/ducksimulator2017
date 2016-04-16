@@ -45,11 +45,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\OrbitCam.cs" />
      <Compile Include="Assets\Scripts\BirdMove.cs" />
      <Compile Include="Assets\Scripts\BoxManager.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
      <Compile Include="Assets\Scripts\Grounded.cs" />
+     <Compile Include="Assets\Scripts\HideBar.cs" />
      <Compile Include="Assets\Scripts\NoticeMe.cs" />
+     <Compile Include="Assets\Scripts\Pickups.cs" />
      <Compile Include="Assets\Scripts\PlayerBirdController.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
