@@ -63,7 +63,7 @@ public class NoticeMe : MonoBehaviour {
 				KillCam.transform.LookAt (transform.position);
 
 				Time.timeScale = 0.01f;
-				Time.fixedDeltaTime = 0f;
+				//Time.fixedDeltaTime = 0f;
 				myLevelManager.Lose ();
 			}
 

@@ -11,12 +11,12 @@ public class LevelManager : MonoBehaviour{
 	public string NextLevelName;
 
 	private bool lost = false;
-	private float originalFixedDeltaTime;
+	//private float originalFixedDeltaTime;
 	private bool paused;
 	private bool levelStarted = false;
 
 	void Start(){
-		originalFixedDeltaTime = Time.fixedDeltaTime;
+		//originalFixedDeltaTime = Time.fixedDeltaTime;
 		WaitForStart ();
 	}
 
@@ -24,7 +24,7 @@ public class LevelManager : MonoBehaviour{
 		if (!lost) {//timescale might just be slowed down, so JIC, don't win if laready lost		
 			//show splash screen to load next level
 			Time.timeScale =1;
-			Time.fixedDeltaTime = originalFixedDeltaTime;
+			//Time.fixedDeltaTime = originalFixedDeltaTime;
 			SceneManager.LoadScene (NextLevelName);
 		}
 	}
@@ -40,14 +40,14 @@ public class LevelManager : MonoBehaviour{
 	void Update(){
 		if (lost && Input.anyKeyDown) {//listen for the Any key after we lose to reload the level
 			Time.timeScale =1;
-			Time.fixedDeltaTime = Time.unscaledDeltaTime;
+			//Time.fixedDeltaTime = Time.unscaledDeltaTime;
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
 
 		if (!levelStarted && Input.anyKeyDown){
 			StartUI.SetActive (false);
 			Time.timeScale = 1f;
-			Time.fixedDeltaTime = Time.unscaledDeltaTime;
+			//Time.fixedDeltaTime = Time.unscaledDeltaTime;
 			levelStarted = true;
 		}
 
