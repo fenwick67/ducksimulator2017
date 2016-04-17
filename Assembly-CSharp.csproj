@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\AIBirdControl.cs" />
+     <Compile Include="Assets\GameAudio.cs" />
      <Compile Include="Assets\KillFloor.cs" />
      <Compile Include="Assets\Scripts\BirdMove.cs" />
      <Compile Include="Assets\Scripts\BoxManager.cs" />
@@ -58,6 +59,7 @@
      <Compile Include="Assets\Scripts\OrbitCam.cs" />
      <Compile Include="Assets\Scripts\Pickups.cs" />
      <Compile Include="Assets\Scripts\PlayerBirdController.cs" />
+     <Compile Include="Assets\Scripts\Singleton.cs" />
      <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\NoiseEffectShaderRGB.shader" />
