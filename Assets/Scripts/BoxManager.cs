@@ -13,7 +13,6 @@ public class BoxManager : MonoBehaviour {
 	private int BoxIndex;
 	private GameObject Box = null;
 
-
 	// Use this for initialization
 	void Start () {
 		BoxIndex = 0;
@@ -48,7 +47,7 @@ public class BoxManager : MonoBehaviour {
 
 	void Hide(){
 		if (Box == null) {
-			Box = (GameObject) Instantiate(Boxes[BoxIndex],BoxTarget.transform.position,BoxTarget.transform.rotation);
+			Box = (GameObject) Instantiate(Boxes[BoxIndex],BoxTarget.transform.position, BoxTarget.transform.rotation);
 			hidden = true;
 		}
 		hideCounter = 1;//max out counter

@@ -420,7 +420,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193030}
-  m_LocalRotation: {x: 0.36805156, y: -0.58912987, z: 0.61577654, w: -0.37186486}
+  m_LocalRotation: {x: 0.36805153, y: -0.5891298, z: 0.6157765, w: -0.37186483}
   m_LocalPosition: {x: -1.7704332, y: 0.00000013764657, z: 0.00000003063201}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
   m_Children: []
@@ -523,7 +523,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 175108}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.1108346}
+  m_LocalPosition: {x: 0, y: 0.932, z: -0.1108346}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 423046}
@@ -687,7 +687,7 @@ Rigidbody:
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 2
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!81 &8181294
@@ -826,9 +826,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Boxes:
-  - {fileID: 160806, guid: bc4da13371853af4a870df9c8fea0baa, type: 2}
+  - {fileID: 128804, guid: 60d29f761f163c046a9b1a697a553f38, type: 2}
   DeployTime: 1
-  BoxTarget: {fileID: 126156}
+  BoxTarget: {fileID: 148160}
   hideCounter: 0
   hidden: 0
 --- !u!114 &11495510
@@ -876,7 +876,7 @@ CapsuleCollider:
   m_Radius: 0.27
   m_Height: 0.92
   m_Direction: 1
-  m_Center: {x: 0, y: 0.43, z: -0.12}
+  m_Center: {x: 0, y: 0.46, z: -0.12}
 --- !u!137 &13723278
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
