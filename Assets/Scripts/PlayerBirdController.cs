@@ -8,6 +8,13 @@ public class PlayerBirdController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		#if UNITY_EDITOR
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
+		#else
+			Cursor.lockState = CursorLockMode.Locked;
+			Cursor.visible = false;
+		#endif
 		myBirdMove = GetComponent<BirdMove> ();
 	}
 	
@@ -38,7 +45,5 @@ public class PlayerBirdController : MonoBehaviour {
 		}
 
 	}
-
-
 		
 }

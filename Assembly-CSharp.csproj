@@ -45,16 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AIBirdControl.cs" />
-     <Compile Include="Assets\EmptyCSharpFile.cs" />
-     <Compile Include="Assets\GameAudio.cs" />
-     <Compile Include="Assets\KillFloor.cs" />
+     <Compile Include="Assets\Scripts\AIBirdControl.cs" />
      <Compile Include="Assets\Scripts\BirdMove.cs" />
      <Compile Include="Assets\Scripts\BoxManager.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />
+     <Compile Include="Assets\Scripts\GameAudio.cs" />
      <Compile Include="Assets\Scripts\GenericLevel.cs" />
      <Compile Include="Assets\Scripts\Grounded.cs" />
      <Compile Include="Assets\Scripts\HideBar.cs" />
+     <Compile Include="Assets\Scripts\KillFloor.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\NoticeMe.cs" />
      <Compile Include="Assets\Scripts\OrbitCam.cs" />

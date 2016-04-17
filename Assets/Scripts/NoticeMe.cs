@@ -35,7 +35,7 @@ public class NoticeMe : MonoBehaviour {
 	void CheckSeen(Collider other){//trigger enter or stay
 		if (other.gameObject.CompareTag ("ViewCone") ) {
 			if (BoxMan.hidden) {
-				print ("safe in my box");
+				//print ("safe in my box");
 			} else {
 				WhenSpotted (other);
 			}
@@ -52,14 +52,13 @@ public class NoticeMe : MonoBehaviour {
 		if (!spotted) {
 			if (CanSeeMe(other)){
 				spotted = true;
-				//todo do something when spotted
-				print ("Spotted");
+				//print ("Spotted");
 
 				MainCam.SetActive (false);
 				KillCam.SetActive (true);
 
 				//my position + the vector to their position * 1.5
-				KillCam.transform.position = transform.position + 2.0f * (other.transform.position + Vector3.up - transform.position);
+				KillCam.transform.position = transform.position + 1.5f * (other.transform.position + Vector3.up - transform.position);
 				KillCam.transform.LookAt (transform.position);
 
 				Time.timeScale = 0.01f;
@@ -82,22 +81,25 @@ public class NoticeMe : MonoBehaviour {
 		Vector3 dir = (halfMyHeight * Vector3.up + transform.position) - from;//direction from eyelevel to my center
 
 		Ray r = new Ray (from, dir);
-		Debug.DrawRay (from,dir,Color.red,55f);
+
+		#if DEBUG 
+			Debug.DrawRay (from,dir,Color.red,55f);
+		#endif
 
 		RaycastHit hit;
 		//int mask = (1 << 8) & (1 << 9) ;//need to hit the world or player
 		bool anyHit = Physics.Raycast (r, out hit,Mathf.Infinity/*,mask*/ );//ray,hit,distance,mask
 
 		if (!anyHit) {
-			print ("hit nothing????");
+			//print ("hit nothing????");
 			return false;
 		}
 		if (hit.collider.CompareTag ("Player")) {
-			print ("hit me");
+			//print ("hit me");
 			return true;
 		} else {
-			print ("hit something else: ");
-			print (hit.collider);
+			//print ("hit something else: ");
+			//print (hit.collider);
 			return false;
 		}
 
