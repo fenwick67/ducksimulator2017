@@ -7,14 +7,17 @@ public class LevelManager : MonoBehaviour{
 
 	public GameObject LoseUI;
 	public GameObject PauseUI;
+	public GameObject StartUI;
 	public string NextLevelName;
 
 	private bool lost = false;
 	private float originalFixedDeltaTime;
 	private bool paused;
+	private bool levelStarted = false;
 
 	void Start(){
-		originalFixedDeltaTime = Time.fixedDeltaTime;		
+		originalFixedDeltaTime = Time.fixedDeltaTime;
+		WaitForStart ();
 	}
 
 	public void Win(){
@@ -40,6 +43,14 @@ public class LevelManager : MonoBehaviour{
 			Time.fixedDeltaTime = Time.unscaledDeltaTime;
 			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 		}
+
+		if (!levelStarted && Input.anyKeyDown){
+			StartUI.SetActive (false);
+			Time.timeScale = 1f;
+			Time.fixedDeltaTime = Time.unscaledDeltaTime;
+			levelStarted = true;
+		}
+
 	}
 
 	public void Pause(){
@@ -62,6 +73,10 @@ public class LevelManager : MonoBehaviour{
 		}
 	}
 
+	void WaitForStart(){
+		Time.timeScale = 0f;//0 timescale until we start
+		StartUI.SetActive (true);
+	}
 
 }
 

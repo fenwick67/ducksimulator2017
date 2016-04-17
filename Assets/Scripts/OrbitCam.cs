@@ -16,9 +16,11 @@ public class OrbitCam : MonoBehaviour {
 		if (Followee == null) {
 			Followee = GameObject.FindGameObjectWithTag ("Player");//don't rely on this
 		}
-		//todo set angle = player rotation
-		LookAtOffset = new Vector3(0f,abovePlayer,0f);
+		//set angle = angle from camera to player in scene setup
+		Vector3 diff = Followee.transform.position - transform.position;
+		angle = 180-Mathf.Rad2Deg * Mathf.Atan2(diff.z,diff.x);//slooppy but works lol
 
+		LookAtOffset = new Vector3(0f,abovePlayer,0f);
 	}
 
 	void LateUpdate () {
