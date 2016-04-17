@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/test.unity
+- path: C:/Users/Drew/workspace/unity/Bathroom Dash/Assets/hall.unity
   isLoaded: 1
   isActive: 1

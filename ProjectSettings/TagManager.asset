@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ViewCone
   - FeelsBumps
+  - Collectible
   layers:
   - Default
   - TransparentFX

@@ -25,6 +25,7 @@ public class BirdMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		interpolatePosition ();
 		updateAnimator ();
 		updateRotation ();
 	}
@@ -51,6 +52,10 @@ public class BirdMove : MonoBehaviour {
 			//update rotation
 			transform.rotation = Quaternion.AngleAxis (-180f + Mathf.Rad2Deg * Mathf.Atan2(movement.x,movement.z),Vector3.up);
 		}
+	}
+
+	void interpolatePosition(){
+		//todo I have no idea how to do this
 	}
 		
 }

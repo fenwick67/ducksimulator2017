@@ -12,7 +12,6 @@ public class OrbitCam : MonoBehaviour {
 	private float angle;
 	private Vector3 LookAtOffset;
 
-	// Use this for initialization
 	void Start () {
 		if (Followee == null) {
 			Followee = GameObject.FindGameObjectWithTag ("Player");//don't rely on this
@@ -21,8 +20,7 @@ public class OrbitCam : MonoBehaviour {
 		LookAtOffset = new Vector3(0f,abovePlayer,0f);
 
 	}
-	
-	// Update is called once per frame
+
 	void LateUpdate () {
 		angle = (angle + Input.GetAxis ("Mouse X") * Time.deltaTime * mouseSensitivity)%360;
 		//set camera position
