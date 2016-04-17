@@ -3,35 +3,42 @@ using System.Collections;
 
 public class PlayerBirdController : MonoBehaviour {
 
-	public BirdMove bm;
+	public BirdMove myBirdMove;
 	public BoxManager boxMan;
 
 	// Use this for initialization
 	void Start () {
-		bm = GetComponent<BirdMove> ();
+		myBirdMove = GetComponent<BirdMove> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetButton ("Fire1")) {//try and hide
 			boxMan.tryHide(true);
-			bm.Move (Vector3.zero);
+			myBirdMove.Move (Vector3.zero);
 		} else {
 			//try unhide
 			boxMan.tryHide(false);
 			//if hidden, don't move
 			if (boxMan.hidden) {
-				bm.Move (Vector3.zero);
+				myBirdMove.Move (Vector3.zero);
 			} else {
 				
 				if (Input.GetButton ("Walk")) {
-					bm.Move (new Vector3 (Input.GetAxis ("Horizontal")*.5f, 0f, Input.GetAxis ("Vertical")*.5f));
+					myBirdMove.Move (new Vector3 (Input.GetAxis ("Horizontal")*.5f, 0f, Input.GetAxis ("Vertical")*.5f));
 				} else {
-					bm.Move (new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical")));
+					myBirdMove.Move (new Vector3 (Input.GetAxis ("Horizontal"), 0f, Input.GetAxis ("Vertical")));
 				}
 			}
 
 		}
+
+		if (Input.GetButtonDown("Fire2")){
+			myBirdMove.Jump();
+		}
+
 	}
+
+
 		
 }

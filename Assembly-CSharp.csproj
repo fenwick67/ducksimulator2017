@@ -45,6 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AIBirdControl.cs" />
+     <Compile Include="Assets\KillFloor.cs" />
      <Compile Include="Assets\Scripts\BirdMove.cs" />
      <Compile Include="Assets\Scripts\BoxManager.cs" />
      <Compile Include="Assets\Scripts\FollowCamera.cs" />

@@ -11,6 +11,8 @@ public class BirdMove : MonoBehaviour {
 	public float SpinSpeed;
 	public Rigidbody rb;
 	public Animator BirdAnimator;
+	public float JumpSpeed = 1f;
+	public float groundCheckDistance = .15f;
 
 	public GameObject Cam;
 
@@ -31,10 +33,37 @@ public class BirdMove : MonoBehaviour {
 	}
 
 	public void Move(Vector3 inputAxes){
-		//todo this sucks
 		movement = Quaternion.AngleAxis(Cam.transform.eulerAngles.y,Vector3.up)* inputAxes;
 		if (movement.magnitude > 1f) {
 			movement = movement.normalized;
+		}
+	}
+
+	public void AIMove(Vector3 direction){
+		movement = direction;
+		if (movement.magnitude > 1f) {
+			movement = movement.normalized;
+		}
+	}
+
+	public void Jump(){
+		if (checkGround ()) {
+			ActuallyJump ();
+		}
+	}
+
+	private void ActuallyJump(){
+		rb.velocity = new Vector3(rb.velocity.x,JumpSpeed,rb.velocity.z);
+	}
+
+	//say whether we are grounded or not
+	private bool checkGround(){
+		Debug.DrawRay (transform.position + Vector3.up * .1f, Vector3.down * groundCheckDistance, Color.blue, 55);
+
+		if (Physics.Raycast (transform.position+Vector3.up*.1f, Vector3.down,groundCheckDistance)) {
+			return true;
+		}else{
+			return false;
 		}
 	}
 
@@ -55,7 +84,7 @@ public class BirdMove : MonoBehaviour {
 	}
 
 	void interpolatePosition(){
-		//todo I have no idea how to do this
+		//TODO I have no idea how to do this
 	}
 		
 }

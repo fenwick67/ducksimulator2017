@@ -52,7 +52,7 @@ public class LevelManager : MonoBehaviour{
 		}
 
 	}
-
+		
 	public void Pause(){
 		paused = true;
 		PauseUI.SetActive (true);

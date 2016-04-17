@@ -112,6 +112,7 @@ GameObject:
   - 114: {fileID: 11495510}
   - 114: {fileID: 11401980}
   - 114: {fileID: 11457156}
+  - 114: {fileID: 11448628}
   m_Layer: 0
   m_Name: duck-rigged-2anims
   m_TagString: Player
@@ -419,7 +420,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193030}
-  m_LocalRotation: {x: 0.36805153, y: -0.5891298, z: 0.6157765, w: -0.37186483}
+  m_LocalRotation: {x: 0.36805156, y: -0.58912987, z: 0.61577654, w: -0.37186486}
   m_LocalPosition: {x: -1.7704332, y: 0.00000013764657, z: 0.00000003063201}
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.9999999}
   m_Children: []
@@ -534,7 +535,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 119976}
   m_LocalRotation: {x: 0, y: -0.80244595, z: 0, w: -0.5967248}
-  m_LocalPosition: {x: 2.23, y: 15.69, z: -48.74}
+  m_LocalPosition: {x: 1.42, y: 15.55, z: -51.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 486054}
@@ -559,7 +560,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 163384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7763625, y: -13.861, z: 46.631485}
+  m_LocalPosition: {x: -26.45, y: -13.861, z: 44.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423046}
@@ -787,8 +788,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9ab18793a994f34bb910ed786d047ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bm: {fileID: 0}
+  myBirdMove: {fileID: 0}
   boxMan: {fileID: 11485802}
+--- !u!114 &11448628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 126156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b60912b79eb24d44b68d41f99d815e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  KillFloorHeight: -50
 --- !u!114 &11457156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -834,6 +847,8 @@ MonoBehaviour:
   SpinSpeed: 2
   rb: {fileID: 0}
   BirdAnimator: {fileID: 9507420}
+  JumpSpeed: 3
+  groundCheckDistance: 0.3
   Cam: {fileID: 0}
 --- !u!124 &12408684
 Behaviour:
