@@ -41,7 +41,7 @@ RenderSettings:
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 6
-  m_GIWorkflowMode: 0
+  m_GIWorkflowMode: 1
   m_LightmapsMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -66,7 +66,7 @@ LightmapSettings:
     m_FinalGather: 0
     m_FinalGatherRayCount: 1024
     m_ReflectionCompression: 2
-  m_LightingDataAsset: {fileID: 112000001, guid: 1f20941da1a68434a9f226b8542b1094,
+  m_LightingDataAsset: {fileID: 112000001, guid: ce0f6ef6bbba16e428b26698ddce9465,
     type: 2}
   m_RuntimeCPUUsage: 75
 --- !u!196 &4
@@ -1108,7 +1108,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22454842, guid: 1abc36185d1edc842a4b6c6f60812c52, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11436986, guid: 1abc36185d1edc842a4b6c6f60812c52, type: 2}
       propertyPath: NextLevelName

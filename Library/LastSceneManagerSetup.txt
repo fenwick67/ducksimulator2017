@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/mtn.unity
+- path: Assets/_Scenes/mtn.unity
   isLoaded: 1
   isActive: 1
