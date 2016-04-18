@@ -4,6 +4,7 @@ using System.Collections;
 public class BirdMove : MonoBehaviour {
 	//bird movement controller
 
+	private bool isAi = false;
 	private Vector3 movement;
 
 	public float MaxSpeed;
@@ -39,8 +40,15 @@ public class BirdMove : MonoBehaviour {
 		}
 	}
 
+
+	private Vector3 weightedAiInput = Vector3.zero;
 	public void AIMove(Vector3 direction){
-		movement = direction;
+
+		//TODO this is hacky but not super critical, just to keep the enemy from doing 1 frame spins
+		Vector3 slowDir = weightedAiInput = weightedAiInput*.9f + direction*.1f;
+
+		isAi = true;
+		movement = slowDir;
 		if (movement.magnitude > 1f) {
 			movement = movement.normalized;
 		}
@@ -67,8 +75,13 @@ public class BirdMove : MonoBehaviour {
 		}
 	}
 
+	//TODO move it here
 	void FixedUpdate(){
-		rb.velocity = new Vector3(movement.x * MoveSpeed,rb.velocity.y,movement.z*MoveSpeed);
+		if (!isAi) {
+			rb.velocity = new Vector3 (movement.x * MoveSpeed, rb.velocity.y, movement.z * MoveSpeed);
+		} else {
+			rb.velocity = MoveSpeed * movement;
+		}
 	}
 
 	void updateAnimator(){
@@ -76,11 +89,12 @@ public class BirdMove : MonoBehaviour {
 	}
 
 	void updateRotation(){//called in update
-		
+
 		if (movement.magnitude > .01f){
 			//update rotation
 			transform.rotation = Quaternion.AngleAxis (-180f + Mathf.Rad2Deg * Mathf.Atan2(movement.x,movement.z),Vector3.up);
 		}
+
 	}
 
 	void interpolatePosition(){

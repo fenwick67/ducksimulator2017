@@ -25,12 +25,29 @@ public class OrbitCam : MonoBehaviour {
 
 	void LateUpdate () {
 		angle = (angle + Input.GetAxis ("Mouse X") * Time.deltaTime * mouseSensitivity)%360;
+
 		//set camera position
 		// = player position plus distanceAway rotated by angle
 		transform.position = Followee.transform.position + (Quaternion.AngleAxis(angle,Vector3.up) * CameraPosition);
 
-		//point at lookAt + gameobject
-		transform.LookAt(Followee.transform.position + LookAtOffset);
+		Vector3 target = Followee.transform.position + LookAtOffset;//where we're gonna look, ideally, in world space
+
+
+		RaycastHit hit;
+
+		//ray is cast from midpoint between cam ideal position and target to cam ideal position :)
+		Ray wallCheck = new Ray (target + (transform.position - target)*.1f , transform.position - target);
+		//check if we're in a wall
+		if (Physics.Raycast (wallCheck, out hit, Vector3.Distance (transform.position, target))) {
+			transform.position = hit.point;
+			//look down a little when in a wall, to show the character
+			transform.LookAt (Vector3.Lerp ((Followee.transform.position*.3f + target*.7f),target,Vector3.Distance (transform.position, target)/( (CameraPosition - LookAtOffset).magnitude)));//lerp the target from target ---> player root, depending on how short the distance is
+		} else {
+			//point directly at target
+			transform.LookAt(target);		
+		}
+
+
 
 	}
 }

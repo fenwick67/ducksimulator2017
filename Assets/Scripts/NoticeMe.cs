@@ -57,9 +57,9 @@ public class NoticeMe : MonoBehaviour {
 				MainCam.SetActive (false);
 				KillCam.SetActive (true);
 
-				//my position + the vector to their position * 1.5
-				KillCam.transform.position = transform.position + 1.5f * (other.transform.position + Vector3.up - transform.position);
-				KillCam.transform.LookAt (transform.position);
+				//look at the enemy from me... most consistent way to see them
+				KillCam.transform.position = transform.position + .5f*Vector3.up;
+				KillCam.transform.LookAt (other.transform.position);
 
 				Time.timeScale = 0.01f;
 				//Time.fixedDeltaTime = 0f;
@@ -82,7 +82,7 @@ public class NoticeMe : MonoBehaviour {
 
 		Ray r = new Ray (from, dir);
 
-		#if DEBUG 
+		#if UNITY_EDITOR 
 			Debug.DrawRay (from,dir,Color.red,55f);
 		#endif
 

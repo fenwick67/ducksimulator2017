@@ -842,8 +842,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 144078}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21.91, y: 0.01, z: -14.36}
+  m_LocalRotation: {x: 0, y: 0.95911103, z: 0, w: -0.28303003}
+  m_LocalPosition: {x: -16.86, y: 0.35, z: -23.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 473684}
@@ -857,7 +857,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 133752}
   m_LocalRotation: {x: 0, y: -0.80244595, z: 0, w: -0.5967248}
-  m_LocalPosition: {x: -24.43, y: 1.91, z: -16.43}
+  m_LocalPosition: {x: -20.47, y: 1.91, z: -38.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 477080}
@@ -1385,7 +1385,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Boxes:
   - {fileID: 128804, guid: 60d29f761f163c046a9b1a697a553f38, type: 2}
-  DeployTime: 1
+  DeployTime: 0.5
   BoxTarget: {fileID: 184154}
   hideCounter: 0
   hidden: 0
@@ -1421,7 +1421,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WASTED
+  m_Text: BUSTED
 --- !u!114 &11461608
 MonoBehaviour:
   m_ObjectHideFlags: 1

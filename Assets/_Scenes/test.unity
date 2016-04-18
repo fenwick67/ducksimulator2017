@@ -93,13 +93,17 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11409926, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}
+      propertyPath: Waypoints.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 431310, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}
       propertyPath: m_LocalPosition.x
       value: 3.91
       objectReference: {fileID: 0}
     - target: {fileID: 431310, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -13.861
+      value: -13.5
       objectReference: {fileID: 0}
     - target: {fileID: 431310, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}
       propertyPath: m_LocalPosition.z
@@ -140,6 +144,10 @@ Prefab:
     - target: {fileID: 19532298, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}
       propertyPath: m_BaseOffset
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 19532298, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}
+      propertyPath: m_AngularSpeed
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6ea0d6f3f16de8c42b576eee0aa546ee, type: 2}

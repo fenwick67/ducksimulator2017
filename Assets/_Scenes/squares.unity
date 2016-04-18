@@ -879,6 +879,10 @@ Prefab:
       propertyPath: nCollectibles
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11436986, guid: 1abc36185d1edc842a4b6c6f60812c52, type: 2}
+      propertyPath: NextLevelName
+      value: _Scenes/Pyramid
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1abc36185d1edc842a4b6c6f60812c52, type: 2}
   m_IsPrefabParent: 0
